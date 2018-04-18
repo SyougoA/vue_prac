@@ -3,17 +3,18 @@
     <div id="timeline">
       <v-divider></v-divider>
       <v-card>
-              <v-card color="blue-grey darken-2" class="white--text">
+              <v-card color="grey lighten-4">
                 <v-card-title primary-title>
                   <div class="headline">Unlimited music now</div>
                   <div id="lo">Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn flat dark>data</v-btn>
+                  <v-spacer></v-spacer>
+                  <v-btn flat>share</v-btn>
                 </v-card-actions>
               </v-card>
               <v-divider></v-divider>
-              <v-card color="cyan darken-2" class="white--text">
+              <v-card color="grey lighten-4">
                 <v-container fluid grid-list-lg>
                   <v-layout row>
                     <v-flex xs7>
@@ -33,7 +34,7 @@
                 </v-container>
               </v-card>
               <v-divider></v-divider>
-              <v-card color="purple" class="white--text">
+              <v-card color="grey lighten-4">
                 <v-container fluid grid-list-lg>
                   <v-layout row>
                     <v-flex xs7>
@@ -52,8 +53,19 @@
                   </v-layout>
                 </v-container>
               </v-card>
-      </v-card>
+          </v-card>
+            <v-btn
+              dark
+              fab
+              top
+              right
+              color="red"
+              id="floatbtn"
+            >
+              <v-icon>edit</v-icon>
+            </v-btn>
     </div>
+    
   </v-content>
 </template>
 
@@ -73,5 +85,9 @@ export default {
 #lo {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#floatbtn {
+  margin-left: 560px;
 }
 </style>

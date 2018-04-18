@@ -8,13 +8,13 @@
       app
     >
       <v-toolbar-side-icon @click.stop="navSet"></v-toolbar-side-icon>
-      <!-- ここのマージンを綺麗にしたい -->
-      <v-toolbar-title class="white--text">Titleeeeee</v-toolbar-title>
-      <v-spacer></v-spacer>
-        <v-toolbar-items v-show="check">
+      <!-- ここのマージンを綺麗にしたい...Soco表記は一応うまくいった -->
+      <v-toolbar-title class="white--text">Soco</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items v-show="check" id="item">
           <v-btn flat @click="toNew">NEW</v-btn>
           <v-btn flat @click="toHot">HOT</v-btn>
-          <v-btn flat>BURN</v-btn>
+          <v-btn flat @click="toPrac">BURN</v-btn>
         </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-btn icon>
@@ -44,10 +44,23 @@ export default {
       this.$store.state.navbar = !this.$store.state.navbar
     },
     toNew () {
-      this.$router.push('/tweet')
+      if (this.$route.path === '/tweet') {
+        this.$router.push('/room')
+      } else if (this.$route.path === '/room') {
+        this.$router.push('/tweet')
+      }
     },
     toHot () {
-      this.$router.push('/')
+      if (this.$route.path === '/tweet') {
+        this.$router.push('/room')
+      } else if (this.$route.path === '/room') {
+        this.$router.push('/tweet')
+      }
+    },
+    toPrac () {
+      if (this.$route.path === '/room') {
+        this.$router.push('/forprac')
+      }
     }
   }
 }
@@ -56,6 +69,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #tool {
+  margin: auto;
+}
+
+#item {
   margin: auto;
 }
 </style>

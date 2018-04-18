@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import cont from '@/components/cont'
 import room from '@/components/room'
 import tweet from '@/components/tweet'
+import forprac from '@/components/forprac'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/tweet',
       name: 'name',
       component: tweet
+    },
+    {
+      path: '/forprac',
+      name: 'forprac',
+      component: forprac
     }
   ]
 })
