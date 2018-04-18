@@ -18,10 +18,12 @@ export default new Router({
     {
       path: '/room',
       name: 'room',
-      component: room,
-      children: [
-        { path: 'tweet', component: tweet }
-      ]
+      component: room
+    },
+    {
+      path: '/tweet',
+      name: 'name',
+      component: tweet
     }
   ]
 })

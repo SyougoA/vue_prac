@@ -38,7 +38,7 @@ export default {
   name: 'room',
   methods: {
     toTweet () {
-      this.$router.push('/')
+      this.$router.push('/tweet')
     }
   }
 }

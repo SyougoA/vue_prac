@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  navbar: null,
+  navbar: null
 }
 
 const mutations = {
