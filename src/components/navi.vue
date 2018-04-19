@@ -22,6 +22,11 @@
             <v-list-tile-title>Room</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile @click="toPrac">
+          <v-list-tile-action>
+            <v-list-tile-title>prac</v-list-tile-title>
+          </v-list-tile-action>
+        </v-list-tile>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -45,6 +50,9 @@ export default {
     },
     toRoom () {
       this.$router.push('room')
+    },
+    toPrac () {
+      this.$router.push('/forprac')
     }
   }
 }

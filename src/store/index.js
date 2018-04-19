@@ -7,6 +7,9 @@ const state = {
   navbar: null
 }
 
+const getters = {
+}
+
 const mutations = {
   updateNavbar (state, value) {
     state.navbar = value
@@ -15,5 +18,6 @@ const mutations = {
 
 export default new Vuex.Store({
   state: state,
+  getters: getters,
   mutations: mutations
 })
