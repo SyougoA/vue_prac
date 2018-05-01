@@ -2,76 +2,63 @@
   <v-content>
     <div id="timeline">
       <v-divider></v-divider>
-      <v-card>
+      <v-card v-for="item in items" :key="item.name">
         <v-card color="grey lighten-4">
-          <v-card-title primary-title>
-            <div class="headline">Unlimited music now</div>
-            <div id="lo">Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
-          </v-card-title>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn flat>share</v-btn>
-          </v-card-actions>
+          <v-container fluid grid-list-lg>
+            <v-layout row>
+              <v-flex xs7>
+                <div>
+                  <div class="headline">{{ item.name }}</div>
+                  <div>Foster the People</div>
+                </div>
+              </v-flex>
+              <v-flex xs5>
+                <v-card-media
+                  :src="require('@/assets/dog.jpg')"
+                  height="125px"
+                  contain
+                ></v-card-media>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-card>
-          <v-divider></v-divider>
-            <v-card color="grey lighten-4">
-              <v-container fluid grid-list-lg>
-                <v-layout row>
-                  <v-flex xs7>
-                    <div>
-                      <div class="headline">Supermodel</div>
-                      <div>Foster the People</div>
-                    </div>
-                  </v-flex>
-                  <v-flex xs5>
-                    <v-card-media
-                      :src="require('@/assets/dog.jpg')"
-                      height="125px"
-                      contain
-                    ></v-card-media>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card>
-            <v-divider></v-divider>
-            <v-card color="grey lighten-4">
-              <v-container fluid grid-list-lg>
-                <v-layout row>
-                  <v-flex xs7>
-                    <div>
-                      <div class="headline">Halycon Days</div>
-                      <div>Ellie Goulding</div>
-                    </div>
-                  </v-flex>
-                  <v-flex xs5>
-                    <v-card-media
-                      src="/static/doc-images/cards/halcyon.png"
-                      height="125px"
-                      contain
-                    ></v-card-media>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card>
-          </v-card>
-            <v-btn
-              dark
-              fab
-              top
-              right
-              color="red"
-              id="floatbtn"
-            >
-              <v-icon>edit</v-icon>
-            </v-btn>
+        <v-divider></v-divider>
+      </v-card>
+        <v-btn
+          dark
+          fab
+          top
+          right
+          color="red"
+          id="floatbtn"
+        >
+          <v-icon>edit</v-icon>
+        </v-btn>
     </div>
-    
   </v-content>
 </template>
 
 <script>
 export default {
-  name: 'tweet'
+  name: 'tweet',
+  data () {
+    return {
+      items: [
+        { name: 'Sample1' },
+        { name: 'Sample2' },
+        { name: 'Sample3' },
+        { name: 'Sample4' },
+        { name: 'Sample5' },
+        { name: 'Sample6' },
+        { name: 'Sample7' },
+        { name: 'Sample8' },
+        { name: 'Sample9' },
+        { name: 'Sample10' },
+        { name: 'Sample11' },
+        { name: 'Sample12' },
+      ]
+    }
+  }
 }
 </script>
 
